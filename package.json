@@ -33,7 +33,8 @@
     "lint": "eslint src --ignore-path .gitignore --ignore-pattern docs .",
     "documentation": "BABEL_ENV=development documentation build src/** -f html -o docs",
     "prepublish": "npm run build",
-    "precommit": "lint-staged && npm run lint && npm run test && npm run documentation && git add docs && emdaer && git add *.md && git add .emdaer/.offline"
+    "precommit": "lint-staged && npm run lint && npm run test && npm run documentation && git add docs && emdaer && git add *.md && git add .emdaer/.offline",
+    "postinstall": "npm run build"
   },
   "peerDependencies": {
     "prop-types": ">=15",
